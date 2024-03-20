@@ -1,0 +1,6 @@
+[
+  {
+    "name": "place",
+    "pattern": "(\\bDetroit\\b|\\bGrand\\ Rapids\\b|\\bWarren\\b|\\bSterling\\ Heights\\b|\\bLansing\\b|\\bAnn\\ Arbor\\b|\\bFlint\\b|\\bDearborn\\b|\\bLivonia\\b|\\bTroy\\b|\\bWestland\\b|\\bFarmington\\ Hills\\b|\\bKalamazoo\\b|\\bWyoming\\b|\\bSouthfield\\b|\\bRochester\\ Hills\\b|\\bTaylor\\b|\\bSt\\.\\ Clair\\ Shores\\b|\\bPontiac\\b|\\bNovi\\b)"
+  }
+]
