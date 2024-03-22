@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: inquire_temperature
   - action: action_tell_temperature
+
+- rule: Tell Weather condition
+  steps:
+  - intent: inquire_weather_condition
+  - action: action_tell_weather_condition

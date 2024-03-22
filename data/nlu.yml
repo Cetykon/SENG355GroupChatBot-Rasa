@@ -94,7 +94,15 @@ nlu:
   examples: |
     - what is the temperature?
     - what is the temperature in [Grand Rapids](place)?
-    - what is the temperature in [Big Rapids](place)
+    - what is the temperature in [Big Rapids](place)?
+
+- intent: inquire_weather_condition
+  examples: |
+    - Could you tell me about the current weather conditions?
+    - Is it raining?
+    - Is it sunny?
+    - what is the current weather condition in [Big Rapids](place)?
+  
 - lookup: place
   examples: |
     - Detroit

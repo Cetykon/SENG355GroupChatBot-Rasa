@@ -15,6 +15,7 @@ entities:
 
 actions:
   - action_tell_temperature
+  - action_tell_weather_condition
 
 responses:
   utter_greet:
