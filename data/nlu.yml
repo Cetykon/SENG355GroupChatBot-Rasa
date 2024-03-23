@@ -95,6 +95,16 @@ nlu:
     - what is the temperature?
     - what is the temperature in [Grand Rapids](place)?
     - what is the temperature in [Big Rapids](place)?
+    - What's the current temperature?
+    - Could you tell me the temperature right now?
+    - What's the temperature outside?
+    - Can you check the temperature for me?
+    - Is it warm or cold today?
+    - What's the temperature like in [Kalamazoo](place)?
+    - How cold is it in [Hollywood](place) right now?
+    - Could you give me the temperature in [Los Angeles](place)?
+    - Can you tell me how hot it is in [Miami](place)?
+
 
 - intent: inquire_weather_condition
   examples: |
@@ -102,7 +112,26 @@ nlu:
     - Is it raining?
     - Is it sunny?
     - what is the current weather condition in [Big Rapids](place)?
-  
+    - Is it clear outside?
+    - Can you check if it's raining?
+    - Could you let me know if it's cloudy?
+
+- intent: inform_air_quality 
+  examples: | 
+    - What's the air quality today? 
+    - Can you tell me the air pollution levels? 
+    - Is the air clean outside? 
+    - Should I wear a mask outside because of the air quality? 
+    - What is the AQI right now? 
+    - Is it safe to exercise outdoors today? 
+    - How bad is the smog today? 
+
+- intent: inform_moon  
+  examples: |  
+    - What phase is the moon in tonight? 
+    - Is there a full moon this week?  
+    - Moon phase on next Saturday?
+
 - lookup: place
   examples: |
     - Detroit
@@ -125,4 +154,64 @@ nlu:
     - St. Clair Shores
     - Pontiac
     - Novi
+    - Los Angeles
+    - San Diego
+    - San Jose
+    - San Francisco
+    - Fresno
+    - Sacramento
+    - Long Beach
+    - Oakland
+    - Bakersfield
+    - Anaheim
+    - Santa Ana
+    - Riverside
+    - Stockton
+    - Irvine
+    - Chula Vista
+    - Fremont
+    - San Bernardino
+    - Modesto
+    - Fontana
+    - Oxnard
+    - Houston
+    - San Antonio
+    - Dallas
+    - Austin
+    - Fort Worth
+    - El Paso
+    - Arlington
+    - Corpus Christi
+    - Plano
+    - Laredo
+    - Lubbock
+    - Garland
+    - Irving
+    - Amarillo
+    - Grand Prairie
+    - Brownsville
+    - McKinney
+    - Frisco
+    - Pasadena
+    - Mesquite
+    - Jacksonville
+    - Miami
+    - Tampa
+    - Orlando
+    - St. Petersburg
+    - Hialeah
+    - Tallahassee
+    - Port St. Lucie
+    - Fort Lauderdale
+    - Cape Coral
+    - Pembroke Pines
+    - Hollywood
+    - Miramar
+    - Gainesville
+    - Coral Springs
+    - Miami Gardens
+    - Clearwater
+    - Palm Bay
+    - Pompano Beach
+    - West Palm Beach
 
