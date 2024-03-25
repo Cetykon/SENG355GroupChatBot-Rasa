@@ -111,26 +111,85 @@ nlu:
     - Could you tell me about the current weather conditions?
     - Is it raining?
     - Is it sunny?
-    - what is the current weather condition in [Big Rapids](place)?
+    - What is the current weather condition in [Big Rapids](place)?
     - Is it clear outside?
     - Can you check if it's raining?
     - Could you let me know if it's cloudy?
+    - What is the weather condition?
+    
+- intent: ask_wind_speed
+  examples: |
+    - how windy is it?
+    - is it windy?
+    - how strong is the wind?
+    - what is the wind speed?
+    - what is the wind speed in [Grand Rapids](place)?
+    - what is the wind speed in [Big Rapids](place)?
+
+- intent: ask_forecast
+  examples: |
+    - what is the forecast?
+    - whats the forecast today?
+    - can you show me the forecast?
+    - what is the forecast in [Grand Rapids](place)?
+    - what is the forecast in [Big Rapids](place)?
 
 - intent: inform_air_quality 
-  examples: | 
-    - What's the air quality today? 
-    - Can you tell me the air pollution levels? 
-    - Is the air clean outside? 
-    - Should I wear a mask outside because of the air quality? 
-    - What is the AQI right now? 
-    - Is it safe to exercise outdoors today? 
-    - How bad is the smog today? 
+  examples: |
+     - What's the air quality today in [Grand Rapids](place) ? 
+     - Can you tell me the air pollution levels in [Ann Arbor](place)? 
+     - Is the air clean outside? 
+     - Should I wear a mask outside because of the air quality? 
+     - What is the AQI right now? 
+     - Is it safe to exercise outdoors today? 
+     - How bad is the smog today? 
 
-- intent: inform_moon  
-  examples: |  
-    - What phase is the moon in tonight? 
-    - Is there a full moon this week?  
-    - Moon phase on next Saturday?
+- intent: humidity
+  examples: |
+    - what is the humidity in [Grand Rapids](place)?
+    - what is the humidity in [Big Rapids](place)?
+    - what is the humidity
+    - humidity
+    - how much water is in the air
+
+- intent: sunrise
+  examples: |
+    - what time is sunrise in [Grand Rapids](place)?
+    - what time is sunrise in [Big Rapids](place)?
+    - what time is sunrise?
+    - when will the sun rise?
+    - when is morning?
+    - sunrise
+
+- intent: sunset
+  examples: |
+    - what time is sunset in [Grand Rapids](place)?
+    - what time is sunset in [Big Rapids](place)?
+    - what time is sunset?
+    - when will the sun set?
+    - when is night?
+    - sunset
+
+- intent: ask_weather_temperature_min_max
+  examples: |
+    - What's the max temperature today in [Detroit](place)?
+    - Show me the min temperature for [Grand Rapids](place) today.
+    - Can I get the highest and lowest temperatures in [Warren](place)?
+    - What are today's temperature extremes in [Sterling Heights](place)?
+    - Tell me the temperature range in [Lansing](place) today.
+    - How cold and hot will it be in [Ann Arbor](place) today?
+    - I need the day's temperatures for [Dearborn](place).
+    - What will be the max and min temps in [Livonia](place)?
+    - What are the temperature highs and lows in [Westland](place)?
+    - What's the expected max and min temperature in [Farmington Hills](place)?
+    - How hot and cold will it get in [Kalamazoo](place) today?
+    - What's the temperature range for [Wyoming](place) today?
+    - I'd like to know today's temperatures in [Southfield](place).
+    - Can you tell me the temperatures for [Rochester Hills](place) today?
+    - What are the min and max temperatures in [Taylor](place) today?
+    - Show me today's temperature range in [St. Clair Shores](place).
+    - I want to know the highest and lowest temperatures in [Pontiac](place) today.
+    - What will the temperatures be like in [Novi](place) today?
 
 - lookup: place
   examples: |

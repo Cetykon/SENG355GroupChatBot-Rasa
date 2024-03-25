@@ -21,3 +21,38 @@ rules:
   steps:
   - intent: inquire_weather_condition
   - action: action_tell_weather_condition
+
+- rule: Tell wind speed
+  steps:
+  - intent: ask_wind_speed
+  - action: action_tell_wind_speed
+
+- rule: Tell forecast
+  steps:
+  - intent: ask_forecast
+  - action: action_tell_forecast
+
+- rule: Tell air quality
+  steps:
+  - intent: inform_air_quality 
+  - action: action_get_air_quality
+
+- rule: humidity
+  steps:
+  - intent: humidity
+  - action: action_tell_humidity
+
+- rule: sunrise
+  steps:
+  - intent: sunrise
+  - action: action_tell_sunrise
+
+- rule: sunset
+  steps:
+  - intent: sunset
+  - action: action_tell_sunset
+
+- rule: temperature range
+  steps:
+  - intent: ask_weather_temperature_min_max
+  - action: action_tell_min_and_max_temp

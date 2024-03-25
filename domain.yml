@@ -9,6 +9,14 @@ intents:
   - mood_unhappy
   - bot_challenge
   - inquire_temperature
+  - inquire_weather_condition
+  - ask_wind_speed
+  - ask_forecast
+  - inform_air_quality 
+  - humidity
+  - sunrise
+  - sunset
+  - ask_weather_temperature_min_max
 
 entities:
   - place
@@ -16,7 +24,14 @@ entities:
 actions:
   - action_tell_temperature
   - action_tell_weather_condition
-
+  - action_tell_wind_speed
+  - action_tell_forecast
+  - action_get_air_quality
+  - action_tell_humidity
+  - action_tell_sunrise
+  - action_tell_sunset
+  - action_tell_min_and_max_temp
+  
 responses:
   utter_greet:
   - text: "Hey! How are you?"
