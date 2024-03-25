@@ -12,15 +12,14 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-# pip install pyowm
-import pyowm
-
-# pip install geopy
-from geopy.geocoders import Nominatim
-
-from datetime import datetime  
+# Importing weather-related libraries
+import pyowm  # pip install pyowm
+from geopy.geocoders import Nominatim  # pip install geopy
+from datetime import datetime   
 
 
+
+# Custom action to get the current temperature of a place
 class ActionTellTemperature(Action):
     # Name Method
     def name(self) -> Text:
@@ -31,14 +30,17 @@ class ActionTellTemperature(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+        # Extracting location entity from the user's input
         current_place = next(tracker.get_latest_entity_values("place"), None)
         
+        # If location entity is not provided by the user
         if not current_place:
             msg = f"Can you give me a place."
             dispatcher.utter_message(text=msg)
             return[]
         
         try:  
+            # Initializing OpenWeatherMap API
             owm = pyowm.OWM('3701e9245325560b2e1eb9a37bcdfce7')
             weather_mgr = owm.weather_manager()
             place = str(current_place) + ', US'
@@ -50,11 +52,7 @@ class ActionTellTemperature(Action):
             dispatcher.utter_message(text=msg)
             return []
         
-        # if not current_place:
-        #     msg = f"You may have misspell the Location can you give me the location again."
-        #     dispatcher.utter_message(text=msg)
-        #     return[]
-        
+        # Constructing the response message
         msg = f"The Temperature is {temperature} fahrenheit in " + str(current_place) + " now."
         dispatcher.utter_message(text=msg)
         return []
