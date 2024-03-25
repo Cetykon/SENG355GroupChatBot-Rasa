@@ -27,10 +27,10 @@ rules:
   - intent: ask_wind_speed
   - action: action_tell_wind_speed
 
-- rule: Tell forecast
+- rule: Tell wind speed details
   steps:
-  - intent: ask_forecast
-  - action: action_tell_forecast
+  - intent: ask_wind_speed_in_detail
+  - action: action_tell_wind_speed_in_detail
 
 - rule: Tell air quality
   steps:

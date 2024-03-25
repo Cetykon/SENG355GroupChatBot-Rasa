@@ -60,7 +60,6 @@ class ActionTellTemperature(Action):
         return []
     
     
-    
 class ActionTellWeatherCondition(Action):
     # Name Method
     def name(self) -> Text:
@@ -132,13 +131,11 @@ class ActionTellWindSpeed(Action):
         return []
     
     
-    
-class ActionTellForecast(Action):
+class ActionTellWindSpeedInDetail(Action):
     # Name Method
     def name(self) -> Text:
-        return "action_tell_forecast"
+        return "action_tell_wind_speed_in_detail"
 
-    
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -161,8 +158,8 @@ class ActionTellForecast(Action):
             wind_gust = wind_dict_in_meters_per_sec['gust']
             
             
-        except:
-            print("Weather API Failed")
+        except Exception as e:  
+            print(f"Weather API Failed: {e}")
             msg = f"You may have misspell the Location can you give me the location again."
             dispatcher.utter_message(text=msg)
             return []
@@ -202,8 +199,8 @@ class ActionTellMinAndMaxTemp(Action):
             fahrenheit_min = int((temp_dict_kelvin['temp_min'] - 273.15) * 9 / 5 + 32)
             fahrenheit_max = int((temp_dict_kelvin['temp_max'] - 273.15) * 9 / 5 + 32)
             
-        except:
-            print("Weather API Failed")
+        except Exception as e:  
+            print(f"Weather API Failed: {e}")
             msg = f"You may have misspell the Location can you give me the location again."
             dispatcher.utter_message(text=msg)
             return []
@@ -238,8 +235,8 @@ class ActionGetAirQuality(Action):
             aq_data = mgr.air_quality_at_coords(location.latitude, location.longitude)
             aqi = aq_data.aqi
             
-        except:
-            print("Weather API Failed")
+        except Exception as e:  
+            print(f"Weather API Failed: {e}")
             msg = f"You may have misspell the Location can you give me the location again."
             dispatcher.utter_message(text=msg)
             return []

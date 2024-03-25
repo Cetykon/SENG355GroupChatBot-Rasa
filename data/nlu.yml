@@ -126,13 +126,14 @@ nlu:
     - what is the wind speed in [Grand Rapids](place)?
     - what is the wind speed in [Big Rapids](place)?
 
-- intent: ask_forecast
+- intent: ask_wind_speed_in_detail
   examples: |
-    - what is the forecast?
-    - whats the forecast today?
-    - can you show me the forecast?
-    - what is the forecast in [Grand Rapids](place)?
-    - what is the forecast in [Big Rapids](place)?
+    - Can you provide details about the wind?
+    - What is the primary wind direction for [Grand Rapids](place)?
+    - Can you provide details about the direction of the wind?
+    - Can you provide details about the gust in [Big Rapids](place)?
+    - Can you provide details about the gust?
+
 
 - intent: inform_air_quality 
   examples: |

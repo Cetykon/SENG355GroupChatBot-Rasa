@@ -11,7 +11,7 @@ intents:
   - inquire_temperature
   - inquire_weather_condition
   - ask_wind_speed
-  - ask_forecast
+  - ask_wind_speed_in_detail
   - inform_air_quality 
   - humidity
   - sunrise
@@ -25,7 +25,7 @@ actions:
   - action_tell_temperature
   - action_tell_weather_condition
   - action_tell_wind_speed
-  - action_tell_forecast
+  - action_tell_wind_speed_in_detail
   - action_get_air_quality
   - action_tell_humidity
   - action_tell_sunrise
